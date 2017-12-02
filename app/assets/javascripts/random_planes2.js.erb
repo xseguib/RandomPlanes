@@ -1,0 +1,240 @@
+$(document).ready(function(){
+    var planes = [
+        {
+            'name': 'Antonov A124 (L4J)',
+            'Velocidad': '0.78',
+            'Estela': 'H',
+            'Name_url': 'antonovA124.png'
+        },
+        {
+            'name': 'Airbus A319/320/321 (L2J)',
+            'Velocidad': '0.79',
+            'Estela': 'M',
+            'Name_url': 'Airbus A319-A320-A321.jpg'
+        },
+        {
+            'name': 'Airbus A332/333 (L4J)',
+            'Velocidad': '0.81',
+            'Estela': 'H',
+            'Name_url': 'Airbus A332-A333.jpg'
+        },
+        {
+            'name': 'Airbus A342/A343/345/346 (L4J)',
+            'Velocidad': '0.82',
+            'Estela': 'H',
+            'Name_url': 'Airbus A342-A343-A345-A346.jpg'
+        },
+        {
+            'name': 'Airbus A388 (L4J)',
+            'Velocidad': '0.89',
+            'Estela': 'J',
+            'Name_url': 'Airbus A388.jpg'
+        },
+        {
+            'name': 'Boeing B733/734/735 (L2J)',
+            'Velocidad': '0.74',
+            'Estela': 'M',
+            'Name_url': 'Boeing B733-B734-B735.jpg'
+        },
+        {
+            'name': 'Boeing B738/739 (L2J)',
+            'Velocidad': '0.78',
+            'Estela': 'M',
+            'Name_url': 'Boeing B738-B739.jpg'
+        },
+        {
+            'name': 'BOEING 744 (L4J)',
+            'Velocidad': '0.85',
+            'Estela': 'H',
+            'Name_url': 'Boeing B743.jpg'
+        },
+        {
+            'name': 'BOEING B752/753 (L2J)',
+            'Velocidad': '0.8',
+            'Estela': 'M',
+            'Name_url': 'Boeing B752-B753.jpg'
+        },
+        {
+            'name': 'BOEING B762/B763/764 (L2J)',
+            'Velocidad': '0.8',
+            'Estela': 'H',
+            'Name_url': 'Boeing B762-B763-B764.jpg'
+        },
+        {
+            'name': 'BOEING B772/773 (L2J)',
+            'Velocidad': '0.84',
+            'Estela': 'H',
+            'Name_url': 'Boeing B772-B773.jpg'
+        },
+        {
+            'name': 'ILYUSHIN IL62 (L4J)',
+            'Velocidad': '0.82',
+            'Estela': 'H',
+            'Name_url': 'Ilyushin IL62.jpg'
+        },
+        {
+            'name': 'ILYUSHIN IL76 (L4J)',
+            'Velocidad': '0.74',
+            'Estela': 'H',
+            'Name_url': 'Ilyushin IL 76.jpg'
+        },
+        {
+            'name': 'MCDONNEL-DOUGLAS BOEING MD11 (L3J)',
+            'Velocidad': '0.83',
+            'Estela': 'H',
+            'Name_url': 'McDonnel-Douglas Boeing MD11.jpg'
+        },
+        {
+            'name': 'MCDONNEL-DOUGLAS BOEING MD83/87 (L2J)',
+            'Velocidad': '0.76',
+            'Estela': 'M',
+            'Name_url': 'McDonnel-Douglas Boeing MD83-MD87.jpg'
+        },
+        {
+            'name': 'TUPOLEV T154 (L3J)',
+            'Velocidad': '0.82',
+            'Estela': 'M',
+            'Name_url': 'Tupolev T154.jpg'
+        },
+        {
+            'name': 'TUPOLEV T204 (L2J)',
+            'Velocidad': '0.79',
+            'Estela': 'M',
+            'Name_url': 'Tupolev T204.jpg'
+        },
+        {
+            'name': 'ATR AT72 (L2T)',
+            'Velocidad': '270',
+            'Estela': 'M',
+            'Name_url': 'ATR AT72.jpg'
+        },
+        {
+            'name': 'CANADAIR CRJ1/2/7/9 (L2J)',
+            'Velocidad': '440',
+            'Estela': 'M',
+            'Name_url': 'Canadair CRJ1-CRJ2-CRJ7-CRJ9.jpg'
+        },
+        {
+            'name': 'EMBRAER E145 (L2J)',
+            'Velocidad': '0.76',
+            'Estela': 'M',
+            'Name_url': 'Embraer E145.jpg'
+        },
+        {
+            'name': 'EMBRAER E175/E190 (L2J)',
+            'Velocidad': '0.83',
+            'Estela': 'M',
+            'Name_url': 'Embraer E175-E190.jpg'
+        },
+        {
+            'name': 'FOKKER F100 (L2J)',
+            'Velocidad': '0.73',
+            'Estela': 'M',
+            'Name_url': 'Fokker F100.jpg'
+        },
+        {
+            'name': 'FOKKER F50 (L2T)',
+            'Velocidad': '240',
+            'Estela': 'M',
+            'Name_url': 'Fokker F50.jpg'
+        },
+        {
+            'name': 'BAE RJ85 (L4J)',
+            'Velocidad': '0.68',
+            'Estela': 'M',
+            'Name_url': 'BAE RJ85.jpg'
+        },
+        {
+            'name': 'CANADAIR GLEX (L2J)',
+            'Velocidad': '0.85',
+            'Estela': 'M',
+            'Name_url': 'Canadair GLEX.jpg'
+        },
+        {
+            'name': 'DASSAULT F2HT (L2J)',
+            'Velocidad': '0.82',
+            'Estela': 'M',
+            'Name_url': 'Dassault F2HT.jpg'
+        },
+        {
+            'name': 'GULFSTREAM GLF5 (L2J)',
+            'Velocidad': '0.85',
+            'Estela': 'M',
+            'Name_url': 'Gulfstream GLF5.jpg'
+        },
+        {
+            'name': 'GATES LEARJET LJ55 (L2J)',
+            'Velocidad': '0.76',
+            'Estela': 'M',
+            'Name_url': 'Gates Learjet LJ55.jpg'
+        },
+        {
+            'name': 'CESSNA C550 (L2J)',
+            'Velocidad': '0.63',
+            'Estela': 'L',
+            'Name_url': 'Cessna C550.jpg'
+        },
+        {
+            'name': 'Aerospatiale AS32 (H2T)',
+            'Velocidad': '140',
+            'Estela': 'M',
+            'Name_url': 'Aerospatiale AS32.jpg'
+        },
+        {
+            'name': 'BELL AUGUSTA B212 (H2T)',
+            'Velocidad': '110',
+            'Estela': 'L',
+            'Name_url': 'Bell Augusta B212.jpg'
+        },
+        {
+            'name': 'CESSNA C337 (L2P)',
+            'Velocidad': '165',
+            'Estela': 'L',
+            'Name_url': 'Cessna C337.jpg'
+        },
+        {
+            'name': 'PIPER PA34 (L2P)',
+            'Velocidad': '180',
+            'Estela': 'L',
+            'Name_url': 'PIPER PA34.jpg'
+        },
+        {
+            'name': 'EADS SOCATA TOBA (L1P)',
+            'Velocidad': '120',
+            'Estela': 'L',
+            'Name_url': 'EADS Socata TOBA.jpg'
+        },
+        {
+            'name': 'LOCKHEED C130 (L4T)',
+            'Velocidad': '290',
+            'Estela': 'M',
+            'Name_url': 'Lockheed C130.jpg'
+        },
+        {
+            'name': 'AIRTECH CASA C295 (L2T)',
+            'Velocidad': '230',
+            'Estela': 'M',
+            'Name_url': 'Airtech Casa C295.jpg'
+        }
+    ]
+    window.index=Math.floor(Math.random()*35)
+    $('#Specs > #nombre').text(planes[window.index].name);
+    $('#Specs > #estela').text(planes[window.index].Estela);
+    $('#Specs > #velocidad').text(planes[window.index].Velocidad);
+
+    $('#porta_img').attr('src','assets/'+decodeURIComponent(planes[window.index].Name_url))
+
+    $('#next').click(function () {
+        window.index=Math.floor(Math.random()*35)
+        $('#porta_img').length > 0 ? $('#porta_img').remove() : null
+
+        $('#Specs > #nombre').text(planes[window.index].name);
+        $('#Specs > #estela').text(planes[window.index].Estela);
+        $('#Specs > #velocidad').text(planes[window.index].Velocidad);
+
+        $('#img-viewer').append("<img id='porta_img' style='display: none' class='img-responsive center-block' src='assets/"+decodeURIComponent(planes[window.index].Name_url)+"'>")
+    })
+    $('#show').click(function () {
+        $('#porta_img').css('display','');
+    })
+})
